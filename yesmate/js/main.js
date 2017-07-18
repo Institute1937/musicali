@@ -1,7 +1,14 @@
 console.log("js")
 
 const endpoint = 'http://localhost:8085';
-const cities = [];
+
 fetch(endpoint)
   .then(blob => blob.json())
-  .then(data => console.log(data));
+  .then(data => {
+    const cities = document.getElementById("cities-div")
+    data.cities.map(city => {
+      const li = document.createElement('li')
+      li.appendChild(document.createTextNode(city))
+      cities.appendChild(li)
+    });
+  });

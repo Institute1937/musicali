@@ -6,7 +6,7 @@ var app = express();
 app.use(cors())
 
 app.get('/', function(req, res) {
-  res.json({answer:'i am a tree'});
+  res.json({cities:["oslo","cadiz","brighton","lille"]});
 });
 
 app.listen(process.env.PORT || 1886);
