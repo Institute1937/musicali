@@ -1,8 +1,12 @@
 var express = require('express');
+var cors = require('cors')
+
 var app = express();
 
+app.use(cors())
+
 app.get('/', function(req, res) {
-  res.send('i am a tree');
+  res.json({answer:'i am a tree'});
 });
 
 app.listen(process.env.PORT || 1886);
