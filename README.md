@@ -1,3 +1,3 @@
-Because sometimes all you want to know is if a simple HTTP server is visible.
+Usage: ./start.sh
 
-Usage: `$ docker run  -p 8000:80 cameron/hello-docker`
+This launches docker container in background mode (-d)

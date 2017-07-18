@@ -4,10 +4,10 @@ services:
   no-youre-a-docker:
     build: .
     image: seaside
+    container_name: landlocked
     volumes:
     - "./yesmate:/root/inhere"
     working_dir: /root/inhere
-    container_name: landlocked
     command: python -m SimpleHTTPServer 1998
     ports:
       - 8080:1998
