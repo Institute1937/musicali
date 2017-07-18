@@ -6,4 +6,4 @@ app.get('/', function(req, res) {
 });
 
 app.listen(process.env.PORT || 1886);
-console.log("i am running on 1886")
+console.log("i am running on 1886 in my container and 8085 to you guys out there")
