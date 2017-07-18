@@ -11,3 +11,15 @@ services:
     command: python -m SimpleHTTPServer 1998
     ports:
       - 8080:1998
+
+  back-end-poc:
+    build: server
+    image: lighthouse
+    container_name: windermere
+    volumes:
+    - "./server:/api"
+    working_dir: /api
+    command: node app.js
+    ports:
+      - 8085:1886
+
