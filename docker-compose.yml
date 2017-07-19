@@ -8,6 +8,6 @@ services:
     volumes:
     - "./yesmate:/root/inhere"
     working_dir: /root/inhere
-    command: python -m SimpleHTTPServer 1998
+    command: npm run dev
     ports:
       - 8080:1998
