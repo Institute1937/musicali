@@ -1,6 +1,6 @@
 module.exports = options => {
   return {
-    entry: './index.js',
+    entry: './js/index.js',
     output: {
       filename: 'bundle.js',
     },
