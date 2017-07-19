@@ -4,5 +4,8 @@ module.exports = options => {
     output: {
       filename: 'bundle.js',
     },
+    devServer: {
+       port: 1998
+    },
   }
 }
