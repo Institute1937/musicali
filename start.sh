@@ -1,3 +1,3 @@
 docker-compose up -d
-open -a "Google Chrome" http://localhost:8080
+open -a "Google Chrome" http://0.0.0.0:8080
 
