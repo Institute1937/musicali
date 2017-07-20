@@ -5,9 +5,9 @@ start.sh
 Dockerfile
 ------------------
 * Base image is Ubuntu
-* Installs python 
+* Installs curl and node
 
-docker-compose.yml
+docker-compose.yml / start.sh
 ------------------
 * one service initially, for the front end ("no-youre-a-docker")
 * builds in current directory
@@ -16,6 +16,18 @@ docker-compose.yml
 * makes the yesmate directory available to the container as /root/inhere
 * runs a python server serving that directory on 1998 (later change to running npm run dev on 1998)
 * maps it to the host on 8080
+* is run by ./start.sh
+
+docker-compose.build.yml / rebuild.sh
+------------------
+* same as docker-compose.yml but also does an npm install, done via an install-npm.sh script instead of direct reference to command
+* is run by ./rebuild.sh
+
+yesmate/install-npm.sh
+------------------
+* runs npm install and then npm run dev
+
+
 
 useful commands / troubleshooting
 ------------------

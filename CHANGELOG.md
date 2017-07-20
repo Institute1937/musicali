@@ -9,6 +9,7 @@ unreleased
 * added curl, sudo, node and npm to ubuntu container
 * added ip of 0.0.0.0 to npm run dev command
 * added a rebuild script for when docker container has been updated
+* rebuild script now also does an npm install
 * added first json data
 
 0.0.2 / 2013-11-06
