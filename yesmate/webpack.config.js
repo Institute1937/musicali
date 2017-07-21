@@ -7,5 +7,10 @@ module.exports = options => {
     devServer: {
        port: 1998
     },
+    module: {
+      rules: [{
+        loader: 'babel-loader',
+      }],
+    },
   }
 }
