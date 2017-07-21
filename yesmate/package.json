@@ -1,0 +1,19 @@
+{
+  "name": "yesmate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --host 0.0.0.0 --env.dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
+  },
+  "dependencies": {
+    "d3v4": "^4.2.2"
+  }
+}
