@@ -1,5 +1,8 @@
 unreleased
 ------------------
+
+0.0.3 / 2017-07-21
+------------------
 * added docker docs + this changelog
 * replaced python server with webpack
 * added d3
@@ -12,7 +15,7 @@ unreleased
 * rebuild script now also does an npm install
 * added first json data
 
-0.0.2 / 2013-11-06
+0.0.2 / 2017-07-20
 ------------------
 * added html, js and css to container
 
