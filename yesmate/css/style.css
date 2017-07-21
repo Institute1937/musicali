@@ -4,3 +4,10 @@ body {
   margin: 0;
   padding: 25px;
 }
+
+.chart {
+  width: 300px;
+  height: 150px;
+  background-color: seagreen;
+  display: block;
+}
