@@ -4,7 +4,6 @@ const square = d3.selectAll("rect");
 square.style("fill", "orange"); 
 
 d3.json("/js/freq-data.json", function(data){
-    console.log("data is " + data.basicFreqSpec);
+    console.log("data is " + data.basicFreqSpec[0].amount);
+    d3.select(".chart").append("rect").attr("width", 50).attr("height", (data.basicFreqSpec[0].amount * 10)).style("fill", "blue");
 });
-
-d3.select(".chart").append("rect").attr("width", 50).attr("height", 200).style("fill", "blue");
