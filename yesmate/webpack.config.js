@@ -4,6 +4,7 @@ module.exports = options => {
     output: {
       filename: 'bundle.js',
     },
+    devtool: 'source-map',
     devServer: {
        port: 1998
     },
