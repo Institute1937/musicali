@@ -24,6 +24,10 @@ docker
 [ ] ADMIN: move and tidy up 'yesmate' client docker
 [ ] investigate shrinking size of docker image - alpine?
 
+linting
+------------------
+
+[√] airbnb
 
 authentication
 ------------------
