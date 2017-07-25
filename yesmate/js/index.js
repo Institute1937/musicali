@@ -1,22 +1,33 @@
 import * as d3 from 'd3v4'; 
 
+// Import the frequency data from freq-data.json
 d3.json("/js/freq-data.json", function(data){
     console.log("data is " + data.basicFreqSpec[0].amount);    
 });
 
+// Temporary simplified data array
 var freqs = [30, 50, 75, 22, 95]; //data.basicFreqSpec
 
+console.log(d3.max(freqs));
+
+// Set size of chart and bar padding
+var w = 500;
+var h = 400;
+var padding = 2;
+
+// Append the main svg for the chart to the page
 var svg = d3.select("body")
             .append("svg")
-              .attr("width", 500)
-              .attr("height", 400);
-            
+              .attr("width", w)
+              .attr("height", h);
+
+// Append the bars to the chart
 svg.selectAll("rect")
    .data(freqs)
    .enter()
    .append("rect")
-     .attr("x", function(d, i){ return (i * 31);})
+     .attr("x", function(d, i){ return (i * (w / freqs.length));})
      .attr("y", "20px")
-     .attr("width", "30px")
-     .attr("height", "320px")
+     .attr("width", w / freqs.length - padding)
+     .attr("height", function(d, i){ return (d * h / d3.max(freqs));})
      .style("fill", "seagreen");
