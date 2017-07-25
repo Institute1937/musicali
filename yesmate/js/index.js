@@ -8,8 +8,6 @@ d3.json("/js/freq-data.json", function(data){
 // Temporary simplified data array
 var freqs = [30, 50, 75, 22, 95]; //data.basicFreqSpec
 
-console.log(d3.max(freqs));
-
 // Set size of chart and bar padding
 var w = 500;
 var h = 400;
@@ -27,7 +25,7 @@ svg.selectAll("rect")
    .enter()
    .append("rect")
      .attr("x", function(d, i){ return (i * (w / freqs.length));})
-     .attr("y", "20px")
+     .attr("y", function(d, i){ return (h - (d * h) / d3.max(freqs));})
      .attr("width", w / freqs.length - padding)
      .attr("height", function(d, i){ return (d * h / d3.max(freqs));})
      .style("fill", "seagreen");
