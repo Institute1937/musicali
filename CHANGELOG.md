@@ -1,6 +1,7 @@
 unreleased
 ------------------
 * use D3 to import frequency data
+* added roadmap
 
 0.0.3 / 2017-07-21
 ------------------
