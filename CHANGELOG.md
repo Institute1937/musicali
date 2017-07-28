@@ -1,6 +1,14 @@
 unreleased
 ------------------
 
+0.0.4 / 2017-07-28
+------------------
+* use D3 to import frequency data
+* added roadmap
+* added sourcemap to webpack
+* make d3 reflect actual frequency data
+* replace shell scripts with a Makefile
+
 0.0.3 / 2017-07-21
 ------------------
 * added docker docs + this changelog

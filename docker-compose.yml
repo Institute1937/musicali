@@ -11,3 +11,4 @@ services:
     command: npm run dev
     ports:
       - 8080:1998
+    user: "${UID}:${GID}"

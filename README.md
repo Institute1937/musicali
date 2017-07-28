@@ -1,3 +1,6 @@
-Usage: ./start.sh
+Usage:
 
-This launches docker container in background mode (-d)
+#make prepare - installs npm packages and then starts
+
+#make start - starts
+
