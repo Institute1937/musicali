@@ -1,8 +1,13 @@
 import * as d3 from 'd3v4'; 
 
 // Import the frequency data from freq-data.json
-d3.json("/js/freq-data.json", function(data){
-    console.log("data is " + data.basicFreqSpec[0].amount);    
+d3.json("/js/freq-data.json", function(error, data){
+    if(error){
+        console.log(error);
+    } 
+    else{
+        console.log("data is " + data.basicFreqSpec[0].amount);    
+    }
 });
 
 // Temporary simplified data array
