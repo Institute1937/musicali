@@ -1,5 +1,9 @@
 unreleased
 ------------------
+
+
+0.0.4 / 2017-07-28
+------------------
 * use D3 to import frequency data
 * added roadmap
 * added sourcemap to webpack
