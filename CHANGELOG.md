@@ -4,6 +4,7 @@ unreleased
 * added roadmap
 * added sourcemap to webpack
 * make d3 reflect actual frequency data
+* replace shell scripts with a Makefile
 
 0.0.3 / 2017-07-21
 ------------------
