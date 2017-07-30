@@ -1,7 +1,7 @@
 
 import * as d3 from 'd3v4'; 
 
-export const container = () => {
+export const soundalyzer = () => {
 var w = 500;
 var h = 400;
 var padding = 2;
