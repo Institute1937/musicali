@@ -11,3 +11,6 @@ local:
 
 install:
 	docker-compose run --rm --no-deps no-youre-a-docker bash -ci 'npm install'
+
+sounds:
+	cd yesmate && npm run sounds
