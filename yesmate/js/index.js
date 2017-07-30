@@ -1,3 +1,3 @@
-import {soundalyzer} from './soundalyzer';
+import {seesound} from './seesound/index';
 
-soundalyzer();
+seesound();
