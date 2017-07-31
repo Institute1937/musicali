@@ -1,5 +1,7 @@
-unreleased
+Unreleased
 ------------------
+* linting
+* two app versions: original and modular with seesound d3 module
 
 0.0.4 / 2017-07-28
 ------------------
@@ -8,7 +10,6 @@ unreleased
 * added sourcemap to webpack
 * make d3 reflect actual frequency data
 * replace shell scripts with a Makefile
-* two app versions: original and modular with seesound d3 module
 
 0.0.3 / 2017-07-21
 ------------------
