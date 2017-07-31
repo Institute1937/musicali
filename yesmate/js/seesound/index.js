@@ -2,11 +2,6 @@ import * as d3 from 'd3v4';
 
 class Seesound {
 
-    constructor() {
-        this.messages = [];
-        this.buildBarChart = this.buildBarChart.bind(this)
-    }
-
     // Function for building a bar chart
     buildBarChart(data){
         var w = 500;
@@ -31,7 +26,7 @@ class Seesound {
     }
 
     createChart(message){
-        var self = this  
+        var self = this
         d3.json("/js/freq-data.json", function(error, data){
             if(error){
                 console.log(error);
