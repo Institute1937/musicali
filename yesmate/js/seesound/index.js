@@ -25,7 +25,7 @@ class Seesound {
             .style("fill", "orange");
     }
 
-    createChart(message){
+    createChart(){
         var self = this
         d3.json("/js/freq-data.json", function(error, data){
             if(error){
