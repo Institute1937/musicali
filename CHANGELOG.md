@@ -1,5 +1,7 @@
-unreleased
+Unreleased
 ------------------
+* linting
+* two app versions: original and modular with seesound d3 module
 
 0.0.4 / 2017-07-28
 ------------------
