@@ -1,4 +1,4 @@
-Unreleased
+0.0.4 / 2017-08-04
 ------------------
 * linting
 * two app versions: original and modular with seesound d3 module
