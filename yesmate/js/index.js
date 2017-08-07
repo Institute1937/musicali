@@ -1,5 +1,5 @@
 import * as d3 from 'd3v4'; 
-
+import config from './config/config.js';
 // Set size of chart and bar padding
 var w = 500;
 var h = 400;
