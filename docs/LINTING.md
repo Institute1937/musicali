@@ -11,3 +11,4 @@ prettier
 ------------------
 * formats the files passed to it by lint-staged and re-writes - so we don't have to!
 
+![](prettier.png)
