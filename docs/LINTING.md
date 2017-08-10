@@ -11,4 +11,4 @@ prettier
 ------------------
 * formats the files passed to it by lint-staged and re-writes - so we don't have to!
 
-![](prettier.png)
+![](https://s3.eu-west-2.amazonaws.com/io1937/musicali/prettier.png)
