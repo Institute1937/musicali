@@ -6,7 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --host 0.0.0.0 --env.dev",
-    "sounds": "webpack-dev-server --config webpack.sounds.js --host 0.0.0.0 --env.dev"
+    "sounds": "webpack-dev-server --config webpack.sounds.js --host 0.0.0.0 --env.dev",
+    "precommit": "lint-staged",
+    "format": "prettier --no-semi --single-quote"
+  },
+  "lint-staged": {
+    "gitDir": "../",
+    "*.js": [
+      "npm run format -- --write",
+      "git add"
+    ]
   },
   "author": "",
   "license": "ISC",
