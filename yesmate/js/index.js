@@ -7,6 +7,9 @@ var padding = 2;
 
 // Function for building a bar chart
 function buildBarChart(data){
+    console.log(data);
+    // Remove any existing svg
+    d3.select("svg").remove();
     
     // Append the main svg for the chart to the page
     var svg = d3.select("body")
@@ -19,10 +22,13 @@ function buildBarChart(data){
       .data(data)
       .enter()
       .append("rect")
+        // Add a numbered class to each bar
+        .attr("class", function(d){ return (".band".concat(d.band)); })  
+        .classed(".bar", true)
         .attr("x", function(d, i){ return (i * (w / data.length));})
-        .attr("y", function(d, i){ return (h - (d.amount * h) / 10);}) // Vertical scale fixed
+        .attr("y", function(d){ return (h - (d.amount * h) / 10);}) // Vertical scale fixed
         .attr("width", w / data.length - padding)
-        .attr("height", function(d, i){ return (d.amount * h / 10);})
+        .attr("height", function(d){ return (d.amount * h / 10);})
         .style("fill", "seagreen");
 }
 
