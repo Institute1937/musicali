@@ -41,6 +41,8 @@ function animateChart(data){
     svg.selectAll("rect")
       .data(data)
         .transition()
+        .attr("y", function(d){ return (h - (d.amount[1] * h) / 10);}) // Vertical scale fixed
+        .attr("height", function(d){ return (d.amount[1] * h / 10);})
         .style("fill", "purple");
 }
 
