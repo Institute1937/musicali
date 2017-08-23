@@ -21,15 +21,15 @@ function buildBarChart(data) {
       .data(data)
       .enter()
       .append('rect')
-        // Add a numbered class to each bar
+        // Add a numbered class to each bar and set their initial positions and scaling
         .attr('class', function(d) { return (".band".concat(d.band)); })
         .classed('.bar', true)
         .attr('x', function(d, i) { return (i * (w / data.length)); })
-        .attr('y', function(d) { return (h - (d.amount[0] * h) / 10); }) // Vertical scale fixed
         .attr('width', w / data.length - padding)
-        .attr('height', function(d) { return (d.amount[0] * h / 10); })
-        .style('fill', 'seagreen');
-
+        .attr('y', h)
+        .attr('height', 0)
+        .style('fill', 'purple');
+                
     // Animate the chart
     animateChart(data);
 }
@@ -42,15 +42,14 @@ function animateChart(data) {
 
     // Change their attributes
     // Hard coding number of steps for now
-    step(1);
+    step(0);
 
     function step(i) {
       bars
         .transition()
         .duration(1000)
         .attr('y', function(d) { return (h - (d.amount[i] * h) / 10); })
-        .attr('height', function(d) { return (d.amount[i] * h / 10); })
-        .style('fill', 'purple')
+        .attr('height', function(d) { return (d.amount[i] * h / 10); })        
         .on('end', function() { if(i < 9) { step(i + 1); } });
     }
 }
