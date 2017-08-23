@@ -42,26 +42,18 @@ function animateChart(data) {
 
     // Change their attributes
     // Hard coding number of steps for now
-    let i = 1;
-    var timer = setInterval(function() {
-        step(i)
-
-        i++;
-        if(i === 10) {
-            clearInterval(timer);
-        }
-    }, 1000);
+    step(1);
 
     function step(i) {
       bars
         .transition()
         .duration(1000)
-        .attr('y', function(d) { return (h - (d.amount[i] * h) / 10); }) // Vertical scale fixed
+        .attr('y', function(d) { return (h - (d.amount[i] * h) / 10); })
         .attr('height', function(d) { return (d.amount[i] * h / 10); })
-        .style('fill', 'purple');
+        .style('fill', 'purple')
+        .on('end', function() { if(i < 9) { step(i + 1); } });
     }
 }
-
 
 // Import the frequency data from freq-data.json
 d3.json('/js/freq-data.json', function(error, data) {
