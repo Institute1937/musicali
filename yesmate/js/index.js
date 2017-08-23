@@ -41,10 +41,25 @@ function animateChart(data) {
     var bars = svg.selectAll('rect').data(data);
 
     // Change their attributes
-    bars.transition()
-        .attr('y', function(d) { return (h - (d.amount[1] * h) / 10); }) // Vertical scale fixed
-        .attr('height', function(d) { return (d.amount[1] * h / 10); })
+    // Hard coding number of steps for now
+    let i = 1;
+    var timer = setInterval(function() {
+        step(i)
+
+        i++;
+        if(i === 10) {
+            clearInterval(timer);
+        }
+    }, 1000);
+
+    function step(i) {
+      bars
+        .transition()
+        .duration(1000)
+        .attr('y', function(d) { return (h - (d.amount[i] * h) / 10); }) // Vertical scale fixed
+        .attr('height', function(d) { return (d.amount[i] * h / 10); })
         .style('fill', 'purple');
+    }
 }
 
 
