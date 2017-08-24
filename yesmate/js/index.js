@@ -41,7 +41,6 @@ function animateChart(data) {
     var bars = svg.selectAll('rect').data(data);
 
     // Change their attributes
-    // Hard coding number of steps for now
     step(0);
 
     function step(i) {
@@ -50,7 +49,7 @@ function animateChart(data) {
         .duration(1000)
         .attr('y', function(d) { return (h - (d.amount[i] * h) / 10); })
         .attr('height', function(d) { return (d.amount[i] * h / 10); })        
-        .on('end', function() { if(i < 9) { step(i + 1); } });
+        .on('end', function(d) { if (d.amount[i + 1]) { step(i + 1); } }); // Keep animating until the data runs out
     }
 }
 
