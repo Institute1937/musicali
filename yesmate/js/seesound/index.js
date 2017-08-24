@@ -27,7 +27,7 @@ class Seesound {
               .classed('.bar', true)
               .attr("x", function(d, i){ return (i * (w / data.length));})
               .attr("width", w / data.length - padding)
-              .attr("y", h) 
+              .attr("y", h - 10) 
               .attr("height", 10)
               .style("fill", "orange");
 
