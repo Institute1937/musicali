@@ -1,8 +1,12 @@
+Untitled
+------------------
+* automatic linting corrections with husky, lint-staged & prettier
+* animate d3 chart
+
 0.0.5 / 2017-08-04
 ------------------
 * linting
 * two app versions: original and modular with seesound d3 module
-* automatic linting corrections with husky, lint-staged & prettier
 
 0.0.4 / 2017-07-28
 ------------------
