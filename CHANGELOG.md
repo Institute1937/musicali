@@ -1,4 +1,4 @@
-Untitled
+Unreleased
 ------------------
 * automatic linting corrections with husky, lint-staged & prettier
 * animate d3 chart
