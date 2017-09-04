@@ -1,3 +1,8 @@
+0.0.6 / 2017-09-04
+------------------
+* automatic linting corrections with husky, lint-staged & prettier
+* animate d3 chart
+
 0.0.5 / 2017-08-04
 ------------------
 * linting
