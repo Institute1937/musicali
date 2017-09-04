@@ -1,4 +1,4 @@
-Unreleased
+0.0.6 / 2017-09-04
 ------------------
 * automatic linting corrections with husky, lint-staged & prettier
 * animate d3 chart
